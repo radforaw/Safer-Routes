@@ -4,6 +4,7 @@ import zipfile
 import csv
 import requests
 from StringIO import StringIO
+from collections import defaultdict
 
 def schools(file='results.zip'):
 	with zipfile.ZipFile(file,'r') as z:
@@ -40,19 +41,21 @@ def getaccs(pts):
 	
 	data=StringIO(n.content)
 	reader=csv.DictReader(data)
-	res={}
+	res=defaultdict(int)
 	
 	for row in reader:
-		ped,child=0,0
-		if row['Casualty Class']=='Pedestrian':
-			ped=1
+		cls=row['Casualty Class']
 		try:
-			if int(row['Age band of casualty'].split(' ')[0])<16:
-				child=1
-		except ValueError:
-			pass
+			age=int(row['Age band of casualty'].split(' ')[0])
+		except:
+			age=999
+		ac='notchild'
+		if age<16 and age>0:
+			ac='child'
+		sev=row['row['Casualty Severity']]
+		res[cls,sev]+=1
+		res[cls,sev,ac]+=1
 
-			
 	print res
 	'''with open('srtstest.csv','w') as f:
 		f.write(n.content)
