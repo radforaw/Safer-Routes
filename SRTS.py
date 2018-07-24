@@ -52,7 +52,7 @@ def getaccs(pts):
 		ac='notchild'
 		if age<16 and age>0:
 			ac='child'
-		sev=row['row['Casualty Severity']]
+		sev=row['Casualty Severity']
 		res[cls,sev]+=1
 		res[cls,sev,ac]+=1
 
