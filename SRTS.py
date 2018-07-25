@@ -93,8 +93,22 @@ import canvas
 
 r=schools()['Primary']
 for n in r:
-	ep=circle(30,1000,r[n][1])
-	a=n
+	size=0
+	if r[n][2]>250:
+		size=1
+	if r[n][2]>500:
+		size=2
+	if r[n][2]>1000:
+		size=3
+	if r[n][2]>1250:
+		size=4
+	if r[n][2]>1500:
+		size=5
+	ep1=circle(30,1000,r[n][1])
+	ep2=circle(30,250,r[n][1])
+	ret1=getaccs(ep1)
+	ret2=getacce(ep2)
+	print ret1[0],ret2[1],ret2[2],size
 	break
 
 print getaccs(ep)
