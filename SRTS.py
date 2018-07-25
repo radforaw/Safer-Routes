@@ -16,7 +16,7 @@ def schools(file='results.zip'):
 				if i['EstablishmentStatus (name)']=='Open':
 					if i['PhaseOfEducation (name)'] not in res:
 						res[i['PhaseOfEducation (name)']]={}
-					res[i['PhaseOfEducation (name)']][i['EstablishmentNumber']]=[i['EstablishmentName'],(int(i['Easting']),int(i['Northing']))]
+					res[i['PhaseOfEducation (name)']][i['EstablishmentNumber']]=[i['EstablishmentName'],(int(i['Easting']),int(i['Northing'])),i['NumberOfPupils']]
 	return res
 
 def circle(sides,size,centre=(0,0)):
@@ -63,11 +63,30 @@ def getaccs(pts):
 	b=sum([res[n,'Serious','child'] for n in ctypes])
 	c=sum([res[n,'Fatal','child'] for n in ctypes])
 	print a,b,c
-	#print res
-	'''with open('srtstest.csv','w') as f:
-		f.write(n.content)
-		'''
-	return 0
+	if a>=1:
+		criteria1=1
+	if b>=1 or a>=10:
+		criteria1=3
+	if a>=20 or b>=5 or c>=1:
+		criteria1=5
+	criteria2=0
+	if a>=1:
+		criteria2=1
+	if a>=2:
+		criteria2=3
+	if b>=1 or c>=1:
+		criteria2=5
+	criteria3=0
+	a=res['Pedestrian','Slight','child']+res['Pedestrian','Slight','notchild']
+	b=res['Pedestrian','Serious','child']+res['Pedestrian','Serious','notchild']
+	c=res['Pedestrian','Fatal','child']+res['Pedestrian','Fatal','notchild']
+	if a>=1:
+		criteria3=1
+	if a>=2 or b>=1:
+		criteria3=3
+	if b>=2 or c>=1:
+		criteria3=5
+	return (criteria1,criteria2,criteria3)
 	
 	
 import canvas
