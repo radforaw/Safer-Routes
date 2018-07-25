@@ -55,8 +55,15 @@ def getaccs(pts):
 		sev=row['Casualty Severity']
 		res[cls,sev]+=1
 		res[cls,sev,ac]+=1
-
-	print res
+		
+		
+	criteria1=0
+	ctypes=('Passenger','Pedestrian','Driver or rider')
+	a=sum([res[n,'Slight','child'] for n in ctypes])
+	b=sum([res[n,'Serious','child'] for n in ctypes])
+	c=sum([res[n,'Fatal','child'] for n in ctypes])
+	print a,b,c
+	#print res
 	'''with open('srtstest.csv','w') as f:
 		f.write(n.content)
 		'''
