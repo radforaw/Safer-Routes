@@ -3,8 +3,10 @@ import canvas
 import zipfile
 import csv
 import requests
+import os
 from StringIO import StringIO
 from collections import defaultdict
+import config
 
 def schools(file='results.zip'):
 	with zipfile.ZipFile(file,'r') as z:
@@ -30,21 +32,24 @@ def getaccs(pts):
 	for n in pts:
 		a+=str(n[0])+'%20'+str(n[1])+'%2C'
 	geom='POLYGON(('+a[:-3]+'))'
-	print geom
+	#print geom
 	start='2016-04-01'
 	end='2018-03-31'
-	token='19fd8a6088b655e8db3d19ab801d36a924d9e17f'
+	token=os.environ['RSTOKEN']
 	payload={'GEOM':geom,'DATE_FULL_FROM':start,'DATE_FULL_TO':end,'token':token}
 	alt=endpoint+'?GEOM='+geom+'&DATE_FULL_FROM='+start+'&DATE_FULL_TO='+end+'&token='+token
 	
 	n=requests.get(alt)   #(endpoint,params=payload)
-	
+	#print n.content
 	data=StringIO(n.content)
 	reader=csv.DictReader(data)
 	res=defaultdict(int)
 	
 	for row in reader:
-		cls=row['Casualty Class']
+		try:
+			cls=row['Casualty Class']
+		except KeyError:
+			return (0,0,0)
 		try:
 			age=int(row['Age band of casualty'].split(' ')[0])
 		except:
@@ -62,7 +67,7 @@ def getaccs(pts):
 	a=sum([res[n,'Slight','child'] for n in ctypes])
 	b=sum([res[n,'Serious','child'] for n in ctypes])
 	c=sum([res[n,'Fatal','child'] for n in ctypes])
-	print a,b,c
+	#print a,b,c
 	if a>=1:
 		criteria1=1
 	if b>=1 or a>=10:
@@ -90,33 +95,42 @@ def getaccs(pts):
 	
 	
 import canvas
-
+res={}
 r=schools()['Primary']
+ctr=0
 for n in r:
+	j=int(r[n][2])
+	print r[n][0],
 	size=0
-	if r[n][2]>250:
+	if j>250:
 		size=1
-	if r[n][2]>500:
+	if j>500:
 		size=2
-	if r[n][2]>1000:
+	if j>1000:
 		size=3
-	if r[n][2]>1250:
+	if j>1250:
 		size=4
-	if r[n][2]>1500:
+	if j>1500:
 		size=5
 	ep1=circle(30,1000,r[n][1])
 	ep2=circle(30,250,r[n][1])
 	ret1=getaccs(ep1)
-	ret2=getacce(ep2)
-	print ret1[0],ret2[1],ret2[2],size
-	break
+	ret2=getaccs(ep2)
+	fin=[ret1[0],ret2[1],ret2[2],size]
+	res[r[n][0]]=fin+[sum(fin)]
+	ctr+=1
+	if ctr>10:
+		break
+		
 
-print getaccs(ep)
+with open('result.csv','w') as csvfile:
+	writ=csv.writer(csvfile)
+	writ.writerow(['school','child rate 1km','child rate outside','pedestrian rate outside','population'])
+	for key,value in sorted(res.iteritems(),key=lambda(k,v):(v[4],k),reverse=True):
+		writ.writerow([key]+value)
 
-w = h = 512
-canvas.set_size(w, h)
-z=circle(15,128,(256,256))
-for n in range(len(z)-1):
-	canvas.draw_line(z[n][0],z[n][1],z[n+1][0],z[n+1][1])
+
+
+
 	
 
