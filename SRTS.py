@@ -1,5 +1,5 @@
 import math
-import canvas
+#import canvas
 import zipfile
 import csv
 import requests
@@ -7,6 +7,8 @@ import os
 from StringIO import StringIO
 from collections import defaultdict
 import config
+
+os.chdir(os.path.dirname(__file__))
 
 def schools(file='results.zip'):
 	with zipfile.ZipFile(file,'r') as z:
@@ -39,7 +41,7 @@ def getaccs(pts):
 	payload={'GEOM':geom,'DATE_FULL_FROM':start,'DATE_FULL_TO':end,'token':token}
 	alt=endpoint+'?GEOM='+geom+'&DATE_FULL_FROM='+start+'&DATE_FULL_TO='+end+'&token='+token
 	
-	n=requests.get(alt)   #(endpoint,params=payload)
+	n=requests.get(alt,timeout=10)   #(endpoint,params=payload)
 	#print n.content
 	data=StringIO(n.content)
 	reader=csv.DictReader(data)
@@ -94,7 +96,7 @@ def getaccs(pts):
 	return (criteria1,criteria2,criteria3)
 	
 	
-import canvas
+#import canvas
 res={}
 r=schools()['Primary']
 ctr=0
@@ -119,8 +121,8 @@ for n in r:
 	fin=[ret1[0],ret2[1],ret2[2],size]
 	res[r[n][0]]=fin+[sum(fin)]
 	ctr+=1
-	if ctr>10:
-		break
+	#if ctr>10:
+	#	break
 		
 
 with open('result.csv','w') as csvfile:
