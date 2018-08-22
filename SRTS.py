@@ -41,7 +41,7 @@ def getaccs(pts):
 	payload={'GEOM':geom,'DATE_FULL_FROM':start,'DATE_FULL_TO':end,'token':token}
 	alt=endpoint+'?GEOM='+geom+'&DATE_FULL_FROM='+start+'&DATE_FULL_TO='+end+'&token='+token
 	
-	n=requests.get(alt,timeout=10)   #(endpoint,params=payload)
+	n=requests.get(alt,timeout=30)   #(endpoint,params=payload)
 	#print n.content
 	data=StringIO(n.content)
 	reader=csv.DictReader(data)
@@ -101,7 +101,10 @@ res={}
 r=schools()['Primary']
 ctr=0
 for n in r:
-	j=int(r[n][2])
+	try:
+		j=int(r[n][2])
+	except:
+		continue
 	print r[n][0],
 	size=0
 	if j>250:
