@@ -98,7 +98,7 @@ def getaccs(pts):
 	
 #import canvas
 res={}
-r=schools()['Primary']
+r=schools()['Secondary']
 ctr=0
 for n in r:
 	try:
