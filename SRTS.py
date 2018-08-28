@@ -96,46 +96,46 @@ def getaccs(pts):
 	return (criteria1,criteria2,criteria3)
 	
 	
-if __name__=='__main__':
-	#import canvas
-	res={}
-	z=schools()['Primary']
-	r=schools()['Secondary'].copy()
-	z.update(r)
-	ctr=0
-	for n in r:
-		try:
-			j=int(r[n][2])
-		except:
-			continue
-		print r[n][0],
-		size=0
-		if j>250:
-			size=1
-		if j>500:
-			size=2
-		if j>1000:
-			size=3
-		if j>1250:
-			size=4
-		if j>1500:
-			size=5
-		ep1=circle(30,1000,r[n][1])
-		ep2=circle(30,250,r[n][1])
-		ret1=getaccs(ep1)
-		ret2=getaccs(ep2)
-		fin=[ret1[0],ret2[1],ret2[2],size]
-		res[r[n][0]]=fin+[sum(fin)]
-		ctr+=1
-		#if ctr>10:
-		#	break
-			
-	
-	with open('result.csv','w') as csvfile:
-		writ=csv.writer(csvfile)
-		writ.writerow(['school','child rate 1km','child rate outside','pedestrian rate outside','population'])
-		for key,value in sorted(res.iteritems(),key=lambda(k,v):(v[4],k),reverse=True):
-			writ.writerow([key]+value)
+#import canvas
+res={}
+
+z=schools()['Primary']
+r=schools()['Secondary'].copy()
+z.update(r)
+ctr=0
+for n in r:
+	try:
+		j=int(r[n][2])
+	except:
+		continue
+	print r[n][0],
+	size=0
+	if j>250:
+		size=1
+	if j>500:
+		size=2
+	if j>1000:
+		size=3
+	if j>1250:
+		size=4
+	if j>1500:
+		size=5
+	ep1=circle(30,1000,r[n][1])
+	ep2=circle(30,250,r[n][1])
+	ret1=getaccs(ep1)
+	ret2=getaccs(ep2)
+	fin=[ret1[0],ret2[1],ret2[2],size]
+	res[r[n][0]]=fin+[sum(fin)]
+	ctr+=1
+	#if ctr>10:
+	#	break
+		
+
+with open('result.csv','w') as csvfile:
+	writ=csv.writer(csvfile)
+	writ.writerow(['school','child rate 1km','child rate outside','pedestrian rate outside','population'])
+	for key,value in sorted(res.iteritems(),key=lambda(k,v):(v[4],k),reverse=True):
+		writ.writerow([key]+value)
 
 
 

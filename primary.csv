@@ -1,0 +1,286 @@
+school,child rate 1km,child rate outside,pedestrian rate outside,population
+Somerville Primary (NC) School,5,5,5,2,17
+Nansen Primary School,5,5,5,2,17
+Arden Primary School,5,5,5,2,17
+Sladefield Infant School,5,5,5,1,16
+Shaw Hill Primary School,5,5,5,1,16
+Nelson Mandela School,5,5,5,1,16
+Conway Primary School,5,5,5,1,16
+Thornton Primary School,5,3,5,2,15
+Grove School,5,5,3,2,15
+Stanville Primary School,3,5,5,1,14
+St Saviour's C of E Primary School,3,5,5,1,14
+Percy Shurmer Academy,3,5,5,1,14
+Ladypool Primary School,5,3,5,1,14
+Heathfield Primary School,5,5,3,1,14
+Ark Tindal Primary Academy,3,5,5,1,14
+Acocks Green Primary School,3,5,5,1,14
+Ward End Primary School,5,3,3,2,13
+Regents Park Community Primary School,3,5,3,2,13
+Parkfield Community School,5,3,3,2,13
+Osborne Primary School,5,5,3,0,13
+Bordesley Green Primary School,5,3,3,2,13
+Blakesley Hall Primary School,3,5,3,2,13
+Alston Primary School,5,3,3,2,13
+Al-Furqan Primary School,3,5,3,2,13
+Wychall Primary School,3,5,3,1,12
+Welford Primary School,5,3,3,1,12
+Twickenham Primary School,3,5,3,1,12
+The Rosary Catholic Primary School,5,3,3,1,12
+The Deanery Church of England Primary School,3,5,3,1,12
+Stechford Primary School,3,5,3,1,12
+St Vincent's Catholic Primary School,3,5,3,1,12
+Holy Souls Catholic Primary School,3,5,3,1,12
+Greenholm Primary School,5,5,0,2,12
+Clifton Primary School,5,0,5,2,12
+Aston Tower Community Primary School,3,5,3,1,12
+Yardley Primary School,3,3,3,2,11
+Wilkes Green Junior School,5,0,5,1,11
+Wilkes Green Infant School (NC),5,0,5,1,11
+St Paul's Catholic Primary School,3,5,3,0,11
+St Patrick's Catholic Primary School,3,3,5,0,11
+Oasis Academy Boulton,5,3,3,0,11
+Kings Heath Primary School,3,3,3,2,11
+Highfield Junior and Infant School,5,1,3,2,11
+Hawthorn Primary School,3,5,3,0,11
+Harborne Primary School,3,3,3,2,11
+Audley Primary School,3,1,5,2,11
+Anderton Park Primary School,3,1,5,2,11
+Albert Bradbeer Primary Academy,3,3,3,2,11
+Wyndcliffe Primary School,5,0,3,2,10
+Story Wood School and Children's Centre,5,3,1,1,10
+St Mary's Catholic Primary School,3,3,3,1,10
+St Francis Catholic Primary School,5,1,3,1,10
+St Dunstan's Catholic Primary School,3,3,3,1,10
+Rookery School,5,1,3,1,10
+Robin Hood Academy,3,5,0,2,10
+Prince Albert Junior and Infant School,5,3,0,2,10
+Kings Rise Academy,3,3,3,1,10
+James Watt Primary School,5,1,3,1,10
+Holy Family Catholic Primary School,5,1,3,1,10
+Grendon Junior and Infant School (NC),3,5,1,1,10
+Elms Farm Community Primary School,3,3,3,1,10
+Colebourne Primary School,3,5,1,1,10
+Chilwell Croft Academy,3,3,3,1,10
+St Thomas CofE Academy,3,3,3,0,9
+"St Marys C of E Primary and Nursery, Academy, Handsworth",5,0,3,1,9
+St Martin de Porres Catholic Primary School,3,5,1,0,9
+St John's CofE Primary School,5,0,3,1,9
+St Anne's Catholic Primary School,3,3,3,0,9
+Marlborough Infant School,5,3,0,1,9
+Mansfield Green E-ACT Academy,5,3,0,1,9
+Kingsland Primary School (NC),3,5,0,1,9
+Harper Bell Seventh-day Adventist School,3,1,5,0,9
+Hall Green Junior School,3,5,0,1,9
+Hall Green Infant School,3,5,0,1,9
+English Martyrs' Catholic Primary School,5,0,3,1,9
+Cotteridge Primary School,3,0,5,1,9
+Christ Church CofE Controlled Primary School and Nursery,5,1,3,0,9
+Chivenor Primary School,3,5,0,1,9
+Abbey Catholic Primary School,5,0,3,1,9
+Yarnfield Primary School,3,0,3,2,8
+"The Olive School, Birmingham",5,0,3,0,8
+Summerfield Junior and Infant School,3,3,1,1,8
+St Catherine of Siena Catholic Primary School,5,0,3,0,8
+St Brigid's Catholic Primary School,1,3,3,1,8
+St Bernadette's Catholic Primary School,3,0,3,2,8
+St Ambrose Barlow Catholic Primary School,3,5,0,0,8
+Sacred Heart Catholic School,5,0,3,0,8
+Park Hill Primary School,3,0,3,2,8
+Northfield Manor Primary Academy,3,1,3,1,8
+Nechells Primary E-ACT Academy,3,5,0,0,8
+Lozells Junior and Infant School and Nursery,5,1,1,1,8
+Highters Heath Community School,3,0,5,0,8
+Grestone Academy,3,3,0,2,8
+Great Barr Primary School,1,3,3,1,8
+Erdington Hall Primary School,3,1,3,1,8
+City Road Primary School,3,1,3,1,8
+Ark Chamberlain Primary Academy,5,0,1,2,8
+Warren Farm Primary School,5,0,1,1,7
+Town Junior School,1,3,3,0,7
+Timberley Academy,3,1,1,2,7
+The Oval School,3,1,1,2,7
+St Margaret Mary RC Junior and Infant School,3,0,3,1,7
+St George's Church of England Primary School,3,1,3,0,7
+St Benedict's Infant School,5,0,1,1,7
+Redhill Junior and Infant School,3,1,3,0,7
+Princethorpe Junior School,3,3,1,0,7
+Princethorpe Infant School,3,3,1,0,7
+Our Lady and St Rose of Lima Catholic Primary School,3,1,3,0,7
+Nishkam Primary School Birmingham,5,0,1,1,7
+Montgomery Primary Academy,5,0,0,2,7
+King David Junior and Infant School,3,1,3,0,7
+Hollyfield Primary School,3,0,3,1,7
+Heathlands Primary Academy,3,0,3,1,7
+Cottesbrooke Infant and Nursery School,3,0,3,1,7
+Christ The King Catholic Primary School,3,0,3,1,7
+Benson Community School,5,0,0,2,7
+Barford Primary School,3,0,3,1,7
+Anglesey Primary School,5,0,0,2,7
+Wattville Primary School,3,0,1,2,6
+Tiverton Academy,1,0,5,0,6
+The Oratory Roman Catholic Primary School,3,0,3,0,6
+The Oaklands Primary School,3,1,1,1,6
+"St Michael's CofE Primary Academy, Handsworth",5,0,1,0,6
+St Gerard's RC Junior and Infant School,5,1,0,0,6
+St Cuthbert's RC Junior and Infant (NC) School,3,1,1,1,6
+St Clement's Church of England Academy,3,0,3,0,6
+St Augustine's Catholic Primary School,3,1,1,1,6
+Saint Barnabas Church of England Primary School,5,0,0,1,6
+Quinton Church Primary School,3,3,0,0,6
+Pegasus Primary School,5,1,0,0,6
+Our Lady of Lourdes Catholic Primary School (NC),3,3,0,0,6
+Mapledene Primary School,3,1,1,1,6
+Leigh Primary School,3,0,1,2,6
+Heath Mount Primary School,5,0,0,1,6
+Greet Primary School,3,0,1,2,6
+Green Meadow Primary School,3,1,1,1,6
+George Dixon Primary School,3,1,1,1,6
+Four Dwellings Primary Academy,3,1,1,1,6
+Firs Primary School,3,1,1,1,6
+Featherstone Primary School,5,0,0,1,6
+Colmers Farm Primary School,1,1,3,1,6
+Broadmeadow Junior School,1,0,5,0,6
+Broadmeadow Infant School,1,0,5,0,6
+Yorkmead Junior and Infant School,3,0,1,1,5
+World's End Junior School,3,0,1,1,5
+World's End Infant and Nursery School,3,0,1,1,5
+Woodhouse Primary Academy,3,0,1,1,5
+Wheelers Lane Primary School,3,0,0,2,5
+Topcliffe Primary School,5,0,0,0,5
+St Thomas More Catholic Primary School,3,0,1,1,5
+St Teresa's Catholic Primary School,5,0,0,0,5
+St Peter's Catholic Primary School,3,1,1,0,5
+St Michael's Church of England Primary School,3,1,0,1,5
+St Mark's Catholic Primary School,1,1,3,0,5
+St James Catholic Primary School,1,3,1,0,5
+St Clare's Catholic Primary School,3,1,0,1,5
+St Chad's Catholic Primary School,3,1,1,0,5
+Paganel Primary School,3,0,1,1,5
+Our Lady's Catholic Primary School,3,1,1,0,5
+Oasis Academy Woodview,3,0,1,1,5
+Oasis Academy Blakenhale Junior,1,0,3,1,5
+Oasis Academy Blakenhale Infants,1,0,3,1,5
+New Oscott Primary School,3,0,0,2,5
+Merritts Brook Primary E-ACT Academy,1,1,3,0,5
+Marsh Hill Primary School,3,0,1,1,5
+Lea Forest Primary Academy,3,1,0,1,5
+Lakey Lane Junior and Infant School,3,1,0,1,5
+Kingsthorne Primary School,3,0,1,1,5
+Jervoise School,3,1,1,0,5
+Hodge Hill Primary School,3,0,0,2,5
+Gunter Primary School,1,1,3,0,5
+Glenmead Primary School,3,1,0,1,5
+Brookfields Primary School,3,0,1,1,5
+Billesley Primary School,3,0,0,2,5
+Bells Farm Primary School,1,1,3,0,5
+Bellfield Infant School (NC),1,0,3,1,5
+Adderley Primary School,3,0,0,2,5
+Yenton Primary School,3,0,0,1,4
+Yardley Wood Community Primary School,3,0,0,1,4
+Wylde Green Primary School,3,0,0,1,4
+Woodgate Primary School,3,0,0,1,4
+West Heath Primary School,3,0,0,1,4
+Sundridge Primary School,3,1,0,0,4
+St Wilfrid's Catholic Junior and Infant School,3,0,0,1,4
+St Peters CofE Primary School,3,0,0,1,4
+St Nicholas Catholic Primary School,1,0,3,0,4
+St Matthew's CofE Primary School,3,0,1,0,4
+St Jude's Catholic Primary School,3,1,0,0,4
+St John's and St Peter's CofE Academy,3,0,1,0,4
+"St James Church of England Primary School, Handsworth",3,0,0,1,4
+"St George's Church of England Academy, Newtown",3,0,0,1,4
+St Edmund's Catholic Primary School,3,0,1,0,4
+St Bernard's Catholic Primary School,3,0,0,1,4
+St Alban's Catholic Primary School,3,1,0,0,4
+Slade Primary School,3,0,0,1,4
+Oasis Academy Short Heath,3,0,0,1,4
+Oasis Academy Hobmoor,3,0,0,1,4
+Oasis Academy Foundry,3,0,1,0,4
+Mere Green Primary School,3,0,0,1,4
+Maryvale Catholic Primary School,3,1,0,0,4
+Manor Park Primary Academy,3,0,0,1,4
+Lyndon Green Junior School,3,0,0,1,4
+Lyndon Green Infant School,3,0,0,1,4
+Kitwell Primary School and Nursery Class,3,1,0,0,4
+Kings Norton Junior and Infant School,3,0,0,1,4
+Hollywood Primary School,3,0,0,1,4
+Hill West Primary School,3,0,0,1,4
+Four Oaks Primary School,3,0,0,1,4
+Corpus Christi Catholic Primary School,3,0,0,1,4
+Chilcote Primary School,3,0,0,1,4
+Chad Vale Primary School,3,0,0,1,4
+Cedars Academy,3,0,0,1,4
+Birches Green Junior School,1,0,3,0,4
+Birches Green Infant School,1,0,3,0,4
+Bellfield Junior School,1,0,3,0,4
+Beeches Junior School,3,0,0,1,4
+Beeches Infant School,3,0,0,1,4
+Banners Gate Primary School,3,0,0,1,4
+Yew Tree Community Junior and Infant School (NC),1,0,1,1,3
+Whitehouse Common Primary School,1,0,0,2,3
+Welsh House Farm Community School and Special Needs Resources Base,3,0,0,0,3
+The Shirestone Academy,3,0,0,0,3
+The Meadows Primary School,1,0,0,2,3
+St Mary's Church of England Primary School,1,1,0,1,3
+St Joseph's Catholic Primary School,1,1,1,0,3
+St John and Monica Catholic Primary School,3,0,0,0,3
+St John Fisher Catholic Primary School,3,0,0,0,3
+St Francis Church of England Aided Primary School and Nursery,3,0,0,0,3
+St Edward's Catholic Primary School,1,0,1,1,3
+Reaside Academy,3,0,0,0,3
+Raddlebarn Primary School,1,0,1,1,3
+Penns Primary School,3,0,0,0,3
+Nonsuch Primary School,3,0,0,0,3
+New Hall Primary and Children's Centre,1,0,1,1,3
+Moseley Church of England Primary School,3,0,0,0,3
+Holy Cross Catholic Primary School,3,0,0,0,3
+Holly Hill Methodist CofE Infant School,3,0,0,0,3
+Gossey Lane Academy,3,0,0,0,3
+Forestdale Primary School,3,0,0,0,3
+Fairway Primary Academy,3,0,0,0,3
+Dorrington Academy,1,0,0,2,3
+Cromwell Junior and Infant School,3,0,0,0,3
+Court Farm Primary School,3,0,0,0,3
+Brownmead Primary Academy,3,0,0,0,3
+Woodthorpe Junior and Infant School,1,1,0,0,2
+Walmley Junior School,1,0,0,1,2
+Walmley Infant School,1,0,0,1,2
+The Orchards Primary Academy,1,0,1,0,2
+The Oaks Primary School,1,0,0,1,2
+St Laurence Church Junior School,1,0,0,1,2
+St Laurence Church Infant School,1,0,0,1,2
+St Columba's Catholic Primary School,1,0,1,0,2
+Severne Junior Infant and Nursery School,1,0,0,1,2
+Rednal Hill Junior School,1,0,0,1,2
+Rednal Hill Infant School,1,0,0,1,2
+Paget Primary School,1,0,0,1,2
+Nelson Junior and Infant School,1,0,0,1,2
+Moor Green Primary Academy,1,0,0,1,2
+Maney Hill Primary School,1,0,0,1,2
+Little Sutton Primary School,1,0,0,1,2
+Holy Trinity CE Primary Academy (Handsworth),1,0,1,0,2
+Holland House Infant School and Nursery,1,0,1,0,2
+Hillstone Primary School,1,0,0,1,2
+Gilbertstone Primary School,1,0,0,1,2
+Coppice Primary School,1,0,0,1,2
+Colmore Junior School,1,0,0,1,2
+Colmore Infant and Nursery School,1,0,0,1,2
+Cofton Primary School,1,0,0,1,2
+Cherry Orchard Primary School,1,0,0,1,2
+Calshot Primary School,1,0,0,1,2
+Bournville Junior School,1,0,0,1,2
+Bournville Infant School,1,0,0,1,2
+Boldmere Junior School,1,0,0,1,2
+Boldmere Infant School and Nursery,1,0,0,1,2
+Allens Croft Primary School,1,0,0,1,2
+Woodcock Hill Primary School,1,0,0,0,1
+Water Mill Primary School,1,0,0,0,1
+Tame Valley Academy,1,0,0,0,1
+Our Lady of Fatima Catholic Primary School,1,0,0,0,1
+Moor Hall Primary School,1,0,0,0,1
+Minworth Junior and Infant School,1,0,0,0,1
+Hawkesley Church Primary Academy,1,0,0,0,1
+Guardian Angels Catholic Primary School,1,0,0,0,1
+Deykin Avenue Junior and Infant School,1,0,0,0,1
+Brookvale Primary School,1,0,0,0,1
