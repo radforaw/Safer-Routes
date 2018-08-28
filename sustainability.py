@@ -4,6 +4,10 @@ z=schools()['Primary']
 r=schools()['Secondary'].copy()
 z.update(r)
 
-for n in z:
-	print n,z[n]
-	break
+file=''
+with zipfile.ZipFile(file,'r') as z:
+		with z.open('results.csv','r') as csvfile:
+			reader=csv.DictReader(csvfile)
+			#print reader.fieldnames
+			res={}
+			for i in reader:
