@@ -17,9 +17,36 @@ with zipfile.ZipFile(file,'r') as n:
 		with n.open('May18Census_PupilPostcodes.csv','r') as csvfile:
 			reader=csv.DictReader(csvfile)
 			#print reader.fieldnames
-			res={}
+			res=[]
+			ct=0
+			tmp=[]
 			for i in reader:
 				if i['DfE'] in z:
+					ct+=1
+					tmp+=i
+					if ct==100:
+						res.append(tmp)
+						tmp=[]
+						ct=0
+					#print ct
+			print len(res)
+				
+				
+				
+				
+				
+				
+				
+				
+'''				
+				
+					
+					
+					
+					
+					
+					
+					
 					#print 'scool',z[i['DfE']]
 					url='https://api.postcodes.io/postcodes/'+i['PCODE']
 					ret=json.loads(requests.get(url).content)
@@ -34,3 +61,4 @@ with zipfile.ZipFile(file,'r') as n:
 				break
 			with open('saved.json','w') as jfile:
 				json.dump(z,jfile)
+'''
