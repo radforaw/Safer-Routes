@@ -17,22 +17,27 @@ with zipfile.ZipFile(file,'r') as n:
 		with n.open('May18Census_PupilPostcodes.csv','r') as csvfile:
 			reader=csv.DictReader(csvfile)
 			#print reader.fieldnames
-			res=[]
-			ct=0
-			tmp=[]
+			lookup=set()
 			for i in reader:
 				if i['DfE'] in z:
-					ct+=1
-					tmp+=i
-					if ct==100:
-						res.append(tmp)
-						tmp=[]
-						ct=0
-					#print ct
-			print len(res)
+					lookup.add(i['PCODE'])
+			print len(lookup)
+			data=list(lookup)
+			j=[data[x:x+100] for x in range(0,len(data),100)]
+			res={}
+			for o in j:
+				n=requests.post('https://postcodes.io/postcodes',data= {'postcodes':o})
+				t=json.loads(n.content)
+				if t['status']==200:
+					for y in t['result']:
+						try:
+							res[y['query']]=(y['result']['eastings'],y['result']['northings'])
+						except TypeError:
+							print y
+			with open('pcodes.json','w') as jfile:
+				json.dump(res,jfile)
 				
-				
-				
+	
 				
 				
 				
