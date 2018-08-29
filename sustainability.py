@@ -12,7 +12,7 @@ z=schools()['Primary']
 r=schools()['Secondary'].copy()
 z.update(r)
 
-file='May18Census_PupilPostcodes.zip'
+'''file='May18Census_PupilPostcodes.zip'
 with zipfile.ZipFile(file,'r') as n:
 		with n.open('May18Census_PupilPostcodes.csv','r') as csvfile:
 			reader=csv.DictReader(csvfile)
@@ -36,34 +36,28 @@ with zipfile.ZipFile(file,'r') as n:
 							print y
 			with open('pcodes.json','w') as jfile:
 				json.dump(res,jfile)
-				
+'''
 	
 				
-				
-				
-				
-				
-'''				
-				
-					
-					
-					
-					
-					
-					
-					
-					#print 'scool',z[i['DfE']]
-					url='https://api.postcodes.io/postcodes/'+i['PCODE']
-					ret=json.loads(requests.get(url).content)
+with open('pcodes.json','r') as jfile:
+		codelookup=json.load(jfile)
+file='May18Census_PupilPostcodes.zip'
+with zipfile.ZipFile(file,'r') as n:
+		with n.open('May18Census_PupilPostcodes.csv','r') as csvfile:
+			reader=csv.DictReader(csvfile)
+			#print reader.fieldnames
+			lookup=set()
+			for i in reader:
+				if i['DfE'] in z:
 					try:
-						if dist((ret['result']['eastings'],ret['result']['northings']),z[i['DfE']][1])<1000:
+						if dist(i(codelookup),z[i['DfE']][1])<1000:
 							try:
 								z[i['DfE']][3]+=1
 							except IndexError:
 								z[i['DfE']].append(1)
 					except:
 						pass
-				break
+
 			with open('saved.json','w') as jfile:
 				json.dump(z,jfile)
-'''
+
