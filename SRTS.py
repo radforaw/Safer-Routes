@@ -6,7 +6,7 @@ import requests
 import os
 from StringIO import StringIO
 from collections import defaultdict
-import config
+import andyconfig
 
 os.chdir(os.path.dirname(__file__))
 
@@ -96,12 +96,23 @@ def getaccs(pts):
 	return (criteria1,criteria2,criteria3)
 	
 if __name__=='__main__':
+	import sys
+	for n in schools():
+		print n
+	print schools()['All through']
+	print schools()['Not applicable']
+	sys.exit(0)
 	#import canvas
 	res={}
 	
 	z=schools()['Primary']
 	r=schools()['Secondary'].copy()
 	z.update(r)
+	r=schools()['All through'].copy()
+	z.update(r)
+	r=schoolser['Not applicable'].copyrr
+	z.update(r)
+	
 	ctr=0
 	for n in r:
 		try:

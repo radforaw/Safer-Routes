@@ -11,8 +11,8 @@ def dist(a,b):
 z=schools()['Primary']
 r=schools()['Secondary'].copy()
 z.update(r)
-
-'''file='May18Census_PupilPostcodes.zip'
+'''
+file='May18Census_PupilPostcodes.zip'
 with zipfile.ZipFile(file,'r') as n:
 		with n.open('May18Census_PupilPostcodes.csv','r') as csvfile:
 			reader=csv.DictReader(csvfile)
@@ -57,6 +57,8 @@ with zipfile.ZipFile(file,'r') as n:
 								z[i['DfE']].append(1)
 					except:
 						pass
+			for a in z:
+				print a,z[a]
 
 			with open('saved.json','w') as jfile:
 				json.dump(z,jfile)
