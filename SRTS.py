@@ -8,7 +8,10 @@ from StringIO import StringIO
 from collections import defaultdict
 import andyconfig
 
-os.chdir(os.path.dirname(__file__))
+try:
+	os.chdir(os.path.dirname(__file__))
+except:
+	pass
 
 def schools(file='results.zip'):
 	with zipfile.ZipFile(file,'r') as z:
@@ -101,7 +104,7 @@ if __name__=='__main__':
 		print n
 	print schools()['All through']
 	print schools()['Not applicable']
-	sys.exit(0)
+	#sys.exit(0)
 	#import canvas
 	res={}
 	
@@ -110,16 +113,16 @@ if __name__=='__main__':
 	z.update(r)
 	r=schools()['All through'].copy()
 	z.update(r)
-	r=schoolser['Not applicable'].copyrr
+	r=schools()['Not applicable'].copy()
 	z.update(r)
 	
 	ctr=0
-	for n in r:
+	for n in z:
 		try:
-			j=int(r[n][2])
+			j=int(z[n][2])
 		except:
 			continue
-		print r[n][0],
+		print z[n][0],
 		size=0
 		if j>250:
 			size=1
@@ -131,12 +134,12 @@ if __name__=='__main__':
 			size=4
 		if j>1500:
 			size=5
-		ep1=circle(30,1000,r[n][1])
-		ep2=circle(30,250,r[n][1])
+		ep1=circle(30,1000,z[n][1])
+		ep2=circle(30,250,z[n][1])
 		ret1=getaccs(ep1)
 		ret2=getaccs(ep2)
 		fin=[ret1[0],ret2[1],ret2[2],size]
-		res[r[n][0]]=fin+[sum(fin)]
+		res[z[n][0]]=fin+[sum(fin)]
 		ctr+=1
 		#if ctr>10:
 		#	break
