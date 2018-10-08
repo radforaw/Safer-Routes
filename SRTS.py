@@ -141,6 +141,11 @@ if __name__=='__main__':
 		fin=[ret1[0],ret2[1],ret2[2],size]
 		res[z[n][0]]=fin+[sum(fin)]
 		ctr+=1
+		print res[z[n][0]]
+		with open('tmpres.csv','a') as csvfile:
+			writ=csv.writer(csvfile)
+			writ.writerow([z[n][0]]+res[z[n][0]])
+			
 		#if ctr>10:
 		#	break
 			
