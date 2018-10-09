@@ -11,6 +11,11 @@ def dist(a,b):
 z=schools()['Primary']
 r=schools()['Secondary'].copy()
 z.update(r)
+r=schools()['All through'].copy()
+z.update(r)
+r=schools()['Not applicable'].copy()
+z.update(r)
+
 '''
 file='May18Census_PupilPostcodes.zip'
 with zipfile.ZipFile(file,'r') as n:
@@ -47,19 +52,35 @@ with zipfile.ZipFile(file,'r') as n:
 			reader=csv.DictReader(csvfile)
 			#print reader.fieldnames
 			lookup=set()
+			nt=0
 			for i in reader:
 				if i['DfE'] in z:
+					#print codelookup[i['PCODE']]
+					#print dist(i[codelookup],z[i['DfE']][1])
 					try:
-						if dist(i(codelookup),z[i['DfE']][1])<1000:
+						if dist(codelookup[i['PCODE']],z[i['DfE']][1])<1000:
 							try:
 								z[i['DfE']][3]+=1
 							except IndexError:
 								z[i['DfE']].append(1)
 					except:
-						pass
+						nt+=1
+				
+			res=[]
 			for a in z:
-				print a,z[a]
+				if len(z[a])>3:
+					res.append([a]+z[a])
+			#print res
+			print sorted(res,key=lambda x:int(x[4]))
+			print nt
+			with open('sust.csv','w') as csvfile:
+				writ=csv.writer(csvfile)
+				writ.writerow(['dfes no','school name','grid ref','tot pupil','pupil within 1000m'])
+				for n in sorted(res,key=lambda x:int(x[4]),reverse=True):
+					writ.writerow(n)
 
 			with open('saved.json','w') as jfile:
 				json.dump(z,jfile)
+
+
 
